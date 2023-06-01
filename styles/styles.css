@@ -18,6 +18,7 @@ body * {
 body header {
   width: 100%;
   position: fixed;
+  z-index: 2;
 }
 body header ul {
   display: flex;
@@ -138,9 +139,25 @@ body .section.skills-section .box-block .box-wrap .box.more {
 body .section.skills-section .box-block .box-wrap .box:hover {
   transform: scale(1.2);
 }
+body .section.exp-section .section-header {
+  height: 20px;
+}
+body .section.exp-section .section-header h3 {
+  font-size: 100px;
+  transform: rotate(270deg) translate(-90%, 30%);
+  text-align: center;
+  display: inline-block;
+  transform-origin: left;
+}
 body .section.exp-section .section-body {
   max-width: 965px;
   margin: auto;
+}
+body .section.exp-section .section-body .exp-box {
+  margin: 30px auto;
+  transition: all 0.4s;
+  padding-left: 40px;
+  border-radius: 3px;
 }
 body .section.exp-section .section-body .exp-box .desig h4 {
   font-size: 28px;
@@ -158,8 +175,17 @@ body .section.exp-section .section-body .exp-box .company .name p a {
   color: #000;
   text-decoration: none;
 }
+body .section.exp-section .section-body .exp-box .company .duration {
+  color: #9e9e9e;
+}
 body .section.exp-section .section-body .exp-box .work-notes {
   padding-left: 19px;
+}
+body .section.exp-section .section-body .exp-box .work-notes ul li.note {
+  line-height: 2;
+}
+body .section.exp-section .section-body .exp-box:hover {
+  border-left: 4px solid #ffc107;
 }
 
 /*# sourceMappingURL=styles.css.map */
