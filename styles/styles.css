@@ -42,6 +42,7 @@ html body header ul li {
   flex: 1;
   transition: all 0.2s ease;
   text-align: center;
+  padding: 0px 8px;
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
   html body header ul li {
@@ -408,7 +409,5 @@ html body .section.contact-section .cv a {
   color: #fff;
   box-shadow: 0px 1px 2px 0px #000;
 }
-
-/* Global Styles */
 
 /*# sourceMappingURL=styles.css.map */
