@@ -141,9 +141,33 @@ html{
                                 color: #fff;
                                 font-weight: bold;  
                                 animation: flicker 1.5s infinite alternate;
+                                @include xs {
+                                    animation: none;
+                                    text-shadow:
+                                        0 0 4px #fff,
+                                        0 0 19px #fff,
+                                        0 0 40px #ffc107,
+                                        0 0 80px #ffc107,
+                                        0 0 90px #ffc107  
+                                }
+                                @include sm {
+                                    animation: none;
+                                    text-shadow:
+                                        0 0 4px #fff,
+                                        0 0 19px #fff,
+                                        0 0 40px #ffc107,
+                                        0 0 80px #ffc107,
+                                        0 0 90px #ffc107  
+                                }
                                 a {
                                     color: #fff;                                
                                     animation: flicker 1.5s infinite alternate;
+                                    @include xs {
+                                        animation: none;
+                                    }
+                                    @include sm {
+                                        animation: none;
+                                    }
                                 }
                             }
                         }
@@ -400,3 +424,363 @@ html{
         }
     }
 }    
+
+/* Global Styles */
+// body {
+//     font-family: Arial, sans-serif;
+//     margin: 0;
+//     padding: 0;
+//   }
+  
+//   /* Header Styles */
+//   #header {
+//     background-color: #333;
+//     color: #fff;
+//     padding: 10px;
+//   }
+  
+//   #header ul {
+//     display: flex;
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//   }
+  
+//   .nav {
+//     margin-right: 10px;
+//   }
+  
+//   .nav a {
+//     color: #fff;
+//     text-decoration: none;
+//   }
+  
+//   /* About Section Styles */
+//   .about-section {
+//     display: flex;
+//     align-items: center;
+//     padding: 40px;
+//   }
+  
+//   .left {
+//     flex: 1;
+//   }
+  
+//   .right {
+//     flex: 2;
+//   }
+  
+//   .title {
+//     margin-bottom: 20px;
+//   }
+  
+//   .desc {
+//     font-size: 16px;
+//     line-height: 1.5;
+//   }
+  
+//   /* Skills Section Styles */
+//   .skills-section {
+//     background-color: #f5f5f5;
+//     padding: 40px;
+//   }
+  
+//   .box-block {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
+  
+//   .box-wrap {
+//     flex: 0 0 25%;
+//     padding: 10px;
+//   }
+  
+//   .box {
+//     background-color: #fff;
+//     border-radius: 5px;
+//     padding: 20px;
+//     text-align: center;
+//   }
+  
+//   .box a {
+//     color: #333;
+//     text-decoration: none;
+//   }
+  
+//   /* Projects Section Styles */
+//   .projects-section {
+//     padding: 40px;
+//   }
+  
+//   .section-header {
+//     text-align: center;
+//   }
+  
+//   .section-body {
+//     margin-top: 20px;
+//   }
+  
+//   .projects {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+  
+//   .project-card {
+//     background-color: #fff;
+//     border-radius: 5px;
+//     padding: 20px;
+//     margin: 10px;
+//     text-align: center;
+//     text-decoration: none;
+//     color: #333;
+//     width: 200px;
+//   }
+  
+//   /* Experience Section Styles */
+//   .exp-section {
+//     background-color: #f5f5f5;
+//     padding: 40px;
+//   }
+  
+//   .exp-box {
+//     margin-bottom: 20px;
+//   }
+  
+//   .desig {
+//     font-weight: bold;
+//   }
+  
+//   .company {
+//     display: flex;
+//     align-items: center;
+//     margin-top: 10px;
+//   }
+  
+//   .company a {
+//     color: #333;
+//     text-decoration: none;
+//   }
+  
+//   .duration {
+//     margin-left: 5px;
+//     color: #777;
+//   }
+  
+//   .work-notes {
+//     margin-top: 10px;
+//   }
+  
+//   /* Contact Section Styles */
+//   .contact-section {
+//     background-color: #333;
+//     color: #fff;
+//     padding: 40px;
+//     text-align: center;
+//   }
+  
+//   .social {
+//     margin-bottom: 20px;
+//   }
+  
+//   .social a {
+//     color: #fff;
+//     text-decoration: none;
+//     margin-right: 10px;
+//   }
+  
+//   .email {
+//     margin-bottom: 20px;
+//   }
+  
+//   .email a {
+//     color: #fff;
+//     text-decoration: none;
+//   }
+  
+//   .cv a {
+//     background-color: #fff;
+//     color: #333;
+//     text-decoration: none;
+//     padding: 10px 20px;
+//     border-radius: 5px;
+//   }
+  
+
+// Global Styles
+// body {
+//     font-family: Arial, sans-serif;
+//     margin: 0;
+//     padding: 0;
+  
+//     // Header Styles
+//     #header {
+//       ul {
+//         display: flex;
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+  
+//         .nav {
+//           margin-right: 10px;
+  
+//           a {
+//             color: #fff;
+//             text-decoration: none;
+//           }
+//         }
+//       }
+//     }
+  
+//     // About Section Styles
+//     .about-section {
+//       display: flex;
+//       align-items: center;
+//       padding: 40px;
+  
+//       .left {
+//         flex: 1;
+//       }
+  
+//       .right {
+//         flex: 2;
+  
+//         .title {
+//           margin-bottom: 20px;
+//         }
+  
+//         .desc {
+//           font-size: 16px;
+//           line-height: 1.5;
+//         }
+//       }
+//     }
+  
+//     // Skills Section Styles
+//     .skills-section {
+//       background-color: #f5f5f5;
+//       padding: 40px;
+  
+//       .box-block {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+  
+//         .box-wrap {
+//           flex: 0 0 25%;
+//           padding: 10px;
+  
+//           .box {
+//             background-color: #fff;
+//             border-radius: 5px;
+//             padding: 20px;
+//             text-align: center;
+  
+//             a {
+//               color: #333;
+//               text-decoration: none;
+//             }
+//           }
+//         }
+//       }
+//     }
+  
+//     // Projects Section Styles
+//     .projects-section {
+//       padding: 40px;
+  
+//       .section-header {
+//         text-align: center;
+//       }
+  
+//       .section-body {
+//         margin-top: 20px;
+//       }
+  
+//       .projects {
+//         display: flex;
+//         flex-wrap: wrap;
+  
+//         .project-card {
+//           background-color: #fff;
+//           border-radius: 5px;
+//           padding: 20px;
+//           margin: 10px;
+//           text-align: center;
+//           text-decoration: none;
+//           color: #333;
+//           width: 200px;
+//         }
+//       }
+//     }
+  
+//     // Experience Section Styles
+//     .exp-section {
+//       background-color: #f5f5f5;
+//       padding: 40px;
+  
+//       .exp-box {
+//         margin-bottom: 20px;
+  
+//         .desig {
+//           font-weight: bold;
+//         }
+  
+//         .company {
+//           display: flex;
+//           align-items: center;
+//           margin-top: 10px;
+  
+//           a {
+//             color: #333;
+//             text-decoration: none;
+//           }
+  
+//           .duration {
+//             margin-left: 5px;
+//             color: #777;
+//           }
+//         }
+  
+//         .work-notes {
+//           margin-top: 10px;
+//         }
+//       }
+//     }
+  
+//     // Contact Section Styles
+//     .contact-section {
+//       background-color: #333;
+//       color: #fff;
+//       padding: 40px;
+//       text-align: center;
+  
+//       .social {
+//         margin-bottom: 20px;
+  
+//         a {
+//           color: #fff;
+//           text-decoration: none;
+//           margin-right: 10px;
+//         }
+//       }
+  
+//       .email {
+//         margin-bottom: 20px;
+  
+//         a {
+//           color: #fff;
+//           text-decoration: none;
+//         }
+//       }
+  
+//       .cv a {
+//         background-color: #fff;
+//         color: #333;
+//         text-decoration: none;
+//         padding: 10px 20px;
+//         border-radius: 5px;
+//       }
+//     }
+//   }
+  

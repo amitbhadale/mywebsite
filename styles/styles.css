@@ -138,9 +138,31 @@ html body .section.about-section .right .desc p span {
   font-weight: bold;
   animation: flicker 1.5s infinite alternate;
 }
+@media screen and (max-width: 599px) {
+  html body .section.about-section .right .desc p span {
+    animation: none;
+    text-shadow: 0 0 4px #fff, 0 0 19px #fff, 0 0 40px #ffc107, 0 0 80px #ffc107, 0 0 90px #ffc107;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.about-section .right .desc p span {
+    animation: none;
+    text-shadow: 0 0 4px #fff, 0 0 19px #fff, 0 0 40px #ffc107, 0 0 80px #ffc107, 0 0 90px #ffc107;
+  }
+}
 html body .section.about-section .right .desc p span a {
   color: #fff;
   animation: flicker 1.5s infinite alternate;
+}
+@media screen and (max-width: 599px) {
+  html body .section.about-section .right .desc p span a {
+    animation: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.about-section .right .desc p span a {
+    animation: none;
+  }
 }
 html body .section.skills-section {
   display: flex;
@@ -386,5 +408,7 @@ html body .section.contact-section .cv a {
   color: #fff;
   box-shadow: 0px 1px 2px 0px #000;
 }
+
+/* Global Styles */
 
 /*# sourceMappingURL=styles.css.map */
