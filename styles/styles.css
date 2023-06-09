@@ -31,32 +31,6 @@ html body header ul {
   background: #ffc107;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
 }
-@media screen and (max-width: 599px) {
-  html body header ul {
-    background-color: red;
-    flex-wrap: wrap;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 959px) {
-  html body header ul {
-    background-color: green;
-  }
-}
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  html body header ul {
-    background-color: blue;
-  }
-}
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
-  html body header ul {
-    background-color: yellow;
-  }
-}
-@media screen and (min-width: 1920px) and (max-width: 5000px) {
-  html body header ul {
-    background-color: purple;
-  }
-}
 html body header ul li {
   animation: slide-down 5s 3;
   list-style-type: none;
