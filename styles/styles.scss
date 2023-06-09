@@ -45,22 +45,9 @@ html{
                 background: #ffc107;
                 box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
 
-                // @include xs {
-                //     background-color: red;
-                //     flex-wrap: wrap;
-                // }
-                // @include sm {
-                //     background-color: green;
-                // }
-                // @include md {
-                //     background-color: blue;
-                // }
-                // @include lg {
-                //     background-color: yellow;
-                // }
-                // @include xl {
-                //     background-color: purple;
-                // }
+                @include xs {
+                    flex-wrap: wrap;
+                }
 
                 li {
                     @include animation('slide-down 5s 3');

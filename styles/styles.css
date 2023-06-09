@@ -31,6 +31,11 @@ html body header ul {
   background: #ffc107;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
 }
+@media screen and (max-width: 599px) {
+  html body header ul {
+    flex-wrap: wrap;
+  }
+}
 html body header ul li {
   animation: slide-down 5s 3;
   list-style-type: none;
