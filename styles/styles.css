@@ -26,15 +26,48 @@ html body header {
 html body header ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 25px;
   background: #ffc107;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 599px) {
+  html body header ul {
+    background-color: red;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body header ul {
+    background-color: green;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  html body header ul {
+    background-color: blue;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  html body header ul {
+    background-color: yellow;
+  }
+}
+@media screen and (min-width: 1920px) and (max-width: 5000px) {
+  html body header ul {
+    background-color: purple;
+  }
 }
 html body header ul li {
   animation: slide-down 5s 3;
   list-style-type: none;
   flex: 1;
   transition: all 0.2s ease;
+  text-align: center;
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body header ul li {
+    flex: 0;
+  }
 }
 html body header ul li a {
   text-transform: uppercase;
@@ -49,21 +82,56 @@ html body header ul li.logo {
   font-weight: bold;
   letter-spacing: 2px;
 }
+@media screen and (max-width: 599px) {
+  html body header ul li.logo {
+    flex-basis: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  html body header ul li.logo {
+    flex-basis: 30%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body header ul li.logo {
+    flex-basis: 20%;
+  }
+}
 html body .section.about-section {
   display: flex;
+  flex-wrap: wrap;
 }
 html body .section.about-section .left {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   background: #000;
 }
+@media screen and (max-width: 599px) {
+  html body .section.about-section .left {
+    flex-basis: 100%;
+  }
+}
+html body .section.about-section .left img {
+  width: 100%;
+}
 html body .section.about-section .right {
-  flex: 1;
+  flex: 2;
   background: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+  html body .section.about-section .right {
+    flex: 1.5;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.about-section .right {
+    flex: 1;
+  }
 }
 html body .section.about-section .right .title {
   padding-left: 30px;
@@ -79,6 +147,12 @@ html body .section.about-section .right .desc p {
   color: #aaa;
   margin-bottom: 3%;
   padding-left: 30px;
+  padding-right: 10px;
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.about-section .right .desc p {
+    font-size: 1.3rem;
+  }
 }
 html body .section.about-section .right .desc p span {
   color: #fff;
@@ -102,6 +176,11 @@ html body .section.skills-section .box-block .box-wrap {
   flex-basis: 25%;
   overflow: hidden;
 }
+@media screen and (max-width: 599px) {
+  html body .section.skills-section .box-block .box-wrap {
+    flex-basis: 50%;
+  }
+}
 html body .section.skills-section .box-block .box-wrap .box {
   justify-content: center;
   flex-basis: 25%;
@@ -111,8 +190,18 @@ html body .section.skills-section .box-block .box-wrap .box {
   flex-direction: column;
   transition: all 0.5s;
 }
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.skills-section .box-block .box-wrap .box {
+    min-height: 150px;
+  }
+}
 html body .section.skills-section .box-block .box-wrap .box a {
   color: #fff;
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.skills-section .box-block .box-wrap .box a {
+    font-size: 0.8em;
+  }
 }
 html body .section.skills-section .box-block .box-wrap .box.mongo {
   background: url("../images/mongo.png") center;
@@ -146,6 +235,11 @@ html body .section.projects-section .section-header {
   height: 20px;
   padding: 25px 0px;
 }
+@media screen and (max-width: 599px) {
+  html body .section.projects-section .section-header {
+    height: auto;
+  }
+}
 html body .section.projects-section .section-header h3 {
   font-size: 100px;
   transform: rotate(270deg) translate(-90%, 30%);
@@ -153,9 +247,26 @@ html body .section.projects-section .section-header h3 {
   display: inline-block;
   transform-origin: left;
 }
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.projects-section .section-header h3 {
+    font-size: 83px;
+  }
+}
+@media screen and (max-width: 599px) {
+  html body .section.projects-section .section-header h3 {
+    transform: none;
+    font-size: 50px;
+  }
+}
 html body .section.projects-section .section-body {
   max-width: 965px;
   margin: auto;
+  width: 70%;
+}
+@media screen and (max-width: 599px) {
+  html body .section.projects-section .section-body {
+    width: 90%;
+  }
 }
 html body .section.projects-section .section-body p {
   font-size: 20px;
@@ -187,6 +298,11 @@ html body .section.projects-section .section-body .projects .project-card span {
 html body .section.exp-section .section-header {
   height: 20px;
 }
+@media screen and (max-width: 599px) {
+  html body .section.exp-section .section-header {
+    height: auto;
+  }
+}
 html body .section.exp-section .section-header h3 {
   font-size: 100px;
   transform: rotate(270deg) translate(-90%, 30%);
@@ -194,15 +310,37 @@ html body .section.exp-section .section-header h3 {
   display: inline-block;
   transform-origin: left;
 }
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  html body .section.exp-section .section-header h3 {
+    font-size: 83px;
+  }
+}
+@media screen and (max-width: 599px) {
+  html body .section.exp-section .section-header h3 {
+    transform: none;
+    font-size: 50px;
+  }
+}
 html body .section.exp-section .section-body {
   max-width: 965px;
   margin: auto;
+  width: 70%;
+}
+@media screen and (max-width: 599px) {
+  html body .section.exp-section .section-body {
+    width: 90%;
+  }
 }
 html body .section.exp-section .section-body .exp-box {
   margin: 30px auto;
   transition: all 0.4s;
   padding-left: 40px;
   border-radius: 3px;
+}
+@media screen and (max-width: 599px) {
+  html body .section.exp-section .section-body .exp-box {
+    padding-left: 20px;
+  }
 }
 html body .section.exp-section .section-body .exp-box .desig h4 {
   font-size: 28px;
@@ -235,8 +373,14 @@ html body .section.exp-section .section-body .exp-box:hover {
 html body .section.contact-section {
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 35px 10px;
   background: #ccc;
+}
+@media screen and (max-width: 599px) {
+  html body .section.contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 html body .section.contact-section .social a {
   text-decoration: none;
@@ -244,6 +388,11 @@ html body .section.contact-section .social a {
   border: 1px solid #333;
   border-radius: 4px;
   color: #222;
+}
+@media screen and (max-width: 599px) {
+  html body .section.contact-section .email {
+    margin: 5% auto;
+  }
 }
 html body .section.contact-section .email a {
   text-decoration: none;

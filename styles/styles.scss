@@ -1,3 +1,5 @@
+@import './media-queries.scss';
+
 @mixin keyframes($animation-name){
     @keyframes #{$animation-name} {
         @content;
@@ -38,15 +40,37 @@ html{
             ul {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 padding: 25px;
                 background: #ffc107;
                 box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+
+                @include xs {
+                    background-color: red;
+                    flex-wrap: wrap;
+                }
+                @include sm {
+                    background-color: green;
+                }
+                @include md {
+                    background-color: blue;
+                }
+                @include lg {
+                    background-color: yellow;
+                }
+                @include xl {
+                    background-color: purple;
+                }
 
                 li {
                     @include animation('slide-down 5s 3');
                     list-style-type: none;
                     flex: 1;
                     transition: all 0.2s ease;
+                    text-align: center;
+                    @include sm {
+                        flex: 0;
+                    }
 
                     a {
                         text-transform: uppercase;
@@ -62,6 +86,16 @@ html{
                         flex-basis: 40%;
                         font-weight: bold;
                         letter-spacing: 2px;
+                        @include xs {
+                            flex-basis: 100%;
+                            margin-bottom: 15px;
+                        }
+                        @include md {
+                            flex-basis: 30%;
+                        }
+                        @include sm {
+                            flex-basis: 20%;
+                        }
                     }
                 }
             }
@@ -70,19 +104,32 @@ html{
         .section {
             &.about-section {
                 display: flex;
-                
+                flex-wrap: wrap;
                 .left {
                     flex: 1;
                     display: flex;
-                    justify-content: center;
+                    justify-content: left;
                     background: #000;
+                    @include xs {
+                        flex-basis: 100%;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    
                 }
                 .right {                
-                    flex: 1;
+                    flex: 2;
                     background: #000;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    @include md {
+                        flex: 1.5;
+                    }
+                    @include sm {
+                        flex: 1;
+                    }
                     .title {
                         padding-left: 30px;
 
@@ -99,6 +146,10 @@ html{
                             color: #aaa;
                             margin-bottom: 3%;
                             padding-left: 30px;
+                            padding-right: 10px;
+                            @include sm {
+                                font-size: 1.3rem;
+                            }
                             span {
                                 color: #fff;
                                 font-weight: bold;  
@@ -124,6 +175,9 @@ html{
                     .box-wrap{               
                         flex-basis: 25%;
                         overflow: hidden;
+                        @include xs {
+                            flex-basis: 50%;
+                        }
                         .box {
                             justify-content: center;
                             flex-basis: 25%;
@@ -132,9 +186,14 @@ html{
                             min-height: 180px;
                             flex-direction: column;
                             transition: all 0.5s;
-
+                            @include sm {
+                                min-height: 150px;
+                            }
                             a {
                                 color: #fff;
+                                @include sm {
+                                    font-size: .8em;
+                                }
                             }
 
                             &.mongo {
@@ -182,17 +241,31 @@ html{
                 .section-header{
                     height: 20px;
                     padding: 25px 0px;
+                    @include xs {
+                        height: auto;
+                    }
                     h3{
                         font-size: 100px;
                         transform: rotate(270deg) translate(-90%, 30%);
                         text-align: center;
                         display: inline-block;
                         transform-origin: left;
+                        @include sm {
+                            font-size: 83px;
+                        }
+                        @include xs {
+                           transform: none;
+                           font-size: 50px;
+                        }
                     }
                 }
                 .section-body{
                     max-width: 965px;
                     margin: auto;
+                    width: 70%;
+                    @include xs {
+                        width: 90%;
+                    }
                     p{
                         font-size: 20px;
                         color: #333;
@@ -226,22 +299,39 @@ html{
                 
                 .section-header{
                     height: 20px;
+                    @include xs {
+                        height: auto;
+                    }
                     h3{
                         font-size: 100px;
                         transform: rotate(270deg) translate(-90%, 30%);
                         text-align: center;
                         display: inline-block;
                         transform-origin: left;
+                        @include sm {
+                            font-size: 83px;
+                        }
+                        @include xs {
+                           transform: none;
+                           font-size: 50px;
+                        }
                     }
                 }
                 .section-body{
                     max-width: 965px;
                     margin: auto;
+                    width: 70%;
+                    @include xs {
+                        width: 90%;
+                     }
                     .exp-box{
                         margin: 30px auto;
                         transition: all .4s;
                         padding-left: 40px;
                         border-radius: 3px;
+                        @include xs {
+                            padding-left: 20px;
+                        }
                         .desig{
                             h4{
                                 font-size: 28px;
@@ -284,8 +374,12 @@ html{
             &.contact-section{
                 display: flex;
                 justify-content: space-between;
-                padding: 20px 10px;
+                padding: 35px 10px;
                 background: #ccc;
+                @include xs {
+                    flex-direction: column;
+                    align-items: center;
+                }
                 .social{
                     a{
                         text-decoration: none;
@@ -296,6 +390,9 @@ html{
                     }
                 }
                 .email{
+                    @include xs {
+                        margin: 5% auto;
+                    }
                     a{
                         text-decoration: none;
                         color: #222;
